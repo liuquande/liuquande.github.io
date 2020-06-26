@@ -120,40 +120,42 @@
 		<meta property="og:image" content="https://yulequan.github.io//ec-net/figures/teaser_one_column_high.png">
 		<meta property="og:title" content="Patch-based Output Space Adversarial Learning for Joint Optic Disc and Cup Segmentation. In ***, 2018.">
   </head>
+    <br>
+    <br>
 
   <body data-gr-c-s-loaded="true">
     <br>
           <center>
-          	<span style="font-size:34px">A Multi-site Dataset for Prostate MRI Segmentation</span><br>
+          	<span style="font-size:34px">A Multi-site Dataset for Prostate MRI Segmentation & SAML</span><br>
 	  		  
-	  		  <br>
+	  		  <!-- <br> -->
 	
-	  		<!--  <table align="center" width="540px">-->
-	  		<!--	  <tbody><tr>-->
-	  	 <!--             <td align="center" width="180px">-->
-	  		<!--			<center>-->
-	  		<!--				<span style="font-size:22px"><a href="https://liuquande.github.io/">Quande Liu</a><sup></sup></span>-->
-		  	<!--	  		</center>-->
-		  	<!--	  	  </td>-->
-	  	 <!--             <td align="center" width="180px">-->
-	  		<!--			<center>-->
-	  		<!--				<span style="font-size:22px"><a href="http://www.cse.cuhk.edu.hk/~qdou/">Qi Dou</a><sup></sup></span>-->
-		  	<!--	  		</center>-->
-		  	<!--	  	  </td>-->
-	  	 <!--             <td align="center" width="180px">-->
-	  		<!--			<center>-->
-	  		<!--				<span style="font-size:22px"><a href="http://www.cse.cuhk.edu.hk/~pheng/">Pheng-Ann Heng</a><sup></sup></span>-->
-		  	<!--	  		</center>-->
-		  	<!--	  	  </td>-->
-	  		<!--	  </tr>-->
-			  <!--</tbody></table>-->
-	  		  
+<!-- 	  		  <table align="center" width="540px">
+	  			  <tbody><tr>
+	  	              <td align="center" width="180px">
+	  					<center>
+	  						<span style="font-size:22px"><a href="https://liuquande.github.io/">Quande Liu</a><sup></sup></span>
+		  		  		</center>
+		  		  	  </td>
+	  	              <td align="center" width="180px">
+	  					<center>
+	  						<span style="font-size:22px"><a href="http://www.cse.cuhk.edu.hk/~qdou/">Qi Dou</a><sup></sup></span>
+		  		  		</center>
+		  		  	  </td>
+	  	              <td align="center" width="180px">
+	  					<center>
+	  						<span style="font-size:22px"><a href="http://www.cse.cuhk.edu.hk/~pheng/">Pheng-Ann Heng</a><sup></sup></span>
+		  		  		</center>
+		  		  	  </td>
+	  			  </tr>
+			  </tbody></table>
+	  		   <br> -->
 			  <!--<table align="center" width="800px"><tbody>-->
 			  <!--<tr>-->
 	  	 <!--             <td align="center" width="50px"></td>-->
 	  	 <!--             <td align="center" width="400px">-->
 	  		<!--			<center>-->
-				 <!--         	<span style="font-size:18px"><sup></sup>The Chinese University of Hong Kong</span>-->
+				          	<!-- <span style="font-size:18px"><sup></sup>The Chinese University of Hong Kong</span> -->
 		  	<!--	  		</center>-->
 	  	 <!--             <td align="center" width="50px"></td>-->
 			  <!--</tr>-->
@@ -207,7 +209,7 @@
 		  <hr>
 
   		  <!--<center><h1>Abstract</h1></center>-->
-         This is a well-organized multi-site dataset for prostate MRI segmentation, which contains prostate T2-weighted MRI data (with segmentation mask) collected from six different data sources out of three public datasets. It can support research in various problem settings with need of multi-site data, such as <a href="https://github.com/amber0309/Domain-generalization"> Domain Generalization</a>, <a href="https://arxiv.org/abs/2002.03366"> Multi-site Learning</a>, <a href="https://arxiv.org/abs/1805.10170"> Life-long Learning</a>, etc.  
+         This is a well-organized multi-site dataset for prostate MRI segmentation, which contains prostate T2-weighted MRI data (with segmentation mask) collected from six different data sources out of three public datasets. It can support research in various problem settings with need of multi-site data, such as <a href="https://github.com/amber0309/Domain-generalization"> Domain Generalization</a>, <a href="https://arxiv.org/abs/2002.03366"> Multi-site Learning</a> and <a href="https://arxiv.org/abs/1805.10170"> Life-long Learning</a>, etc.  
 		<br><br><hr>
 	
 		<h3>(1) Details of data and imaging protocols</h3>
@@ -225,13 +227,30 @@
            <li>Samples of Site C are from  <a href="https://i2cvb.github.io/"> Initiative  for  Collaborative  Computer  Vision  Benchmarking</a> (I2CVB) dataset [2].</li>
            <li>Samples of Site D,E,F are from  <a href="https://promise12.grand-challenge.org/"> Prostate MR Image Segmentation 2012</a> (PROMISE12) dataset [3].</li>
          </ul>
+		
+		<br> 
 
-		<h3>(2) Preprocessing steps <br></h3>
-		We frist convert data from all six sites uniformly to '.nii' format. For preprocessing, we center-cropped the images from Site C with roughly same view in axial plane as images from other sites (since the raw images of Site C are scanned from whole body rather than prostate surrounding area). After that, we resized all samples in the six sites to size of 384x384 in axial plane. This version is called 'Raw_nii'.
+		<h3>(2) Visualization of sample slices <br></h3>
+		The appearance and contrast differences across the six sites can be displied in the figure below:
+		<br> 
+		<br> 
+		    <table align="center" width="900px">
+  			<tbody>
+  			  	<tr>
+  			  		<td align="center"><img class="round" style="width:900px" src="figure/sample_slice.png"></td>	
+			  	</tr>
+			</tbody>
+			</table>
+		<br> 
+		<br>
+
+		<h3>(3) Preprocessing steps <br></h3>
+		We frist convert data from all six sites uniformly to '.nii' format. For preprocessing, we center-cropped the images from Site C with roughly same view in axial plane as images from other sites (since the raw images of Site C are scanned from whole body rather than prostate surrounding area). After that, we resized all samples in the six sites to size of 384x384 in axial plane. This version is called <B>'Raw_nii'</B>.
 		
 		<br> 
 		<br>
-		With the data from 'Raw_nii', we further clip each volume data in the six sites to only preserve slices of prostate region in z space, for the consistency of objective segmented region across domains. This version is called 'Clipped_nii'.
+
+		With the data from 'Raw_nii', we further clip each volume data in the six sites to only preserve slices of prostate region in z space, for the consistency of objective segmented region across domains. This version is called <B>'Clipped_nii'</B>.
 
   	<!--
 	We demonstrate the quality of our method by applying it to consolidate point sets and reconstruct surfaces. Our method produces consolidated point sets and improves the surface reconstruction quality, particularly on preserving the edges. -->
@@ -246,10 +265,9 @@
   		</tbody></table>  -->
 
 
-  		  <h3>(3) Dataset Download Links</h3>
 
-  		  	Datasets:  1. <span style="font-size:16px"><a href="https://github.com/EmmaW8/pOSAL/raw/master/results/GS_test.zip">[Raw_nii]</a> 
-			     2. <span style="font-size:16px"><a href="https://github.com/EmmaW8/pOSAL/raw/master/results/RIM-ONE_test.zip">[Clipped_nii]</a>
+  		  <h3>(4) Dataset Download Links</h3>
+			<span style="font-size:16px"><a href="xxx">[Raw_nii]</a> <br> <br> <span style="font-size:16px"><a href="xxx">[Clipped_nii]</a>
 
 
 		  <br><br>
@@ -258,14 +276,26 @@
 
 
 ​		
+  		  <table align="center" width="1100px">
+  			<tbody>
+			<tr><td width="100px"><left>
+	  		<h2>Code of SAML</h2> 
+	  		The tensorflow implementation (version 1.12.0) can be <span style="font-size:16px"><a href="xxx">Download here</a>.
+<!--   			  	<tr>
+  			  		<td align="center"><img class="round" style="width:800px" src="figure/saml.png"></td>	
+			  	</tr>
 
+			</left></td></tr>
+			</tbody></table>
+			  	Overview of the shape-aware meta-learning scheme. The source domains are randomly split into meta-train and meta-test to simulate the domain shift. In meta-optimization: (1) we constrain the shape compactness in meta-test to encourage segmentations with complete shape; (2) we promote the intra-class cohesion and inter-class separation between the contour and background embeddings regardless of domains, to enhance domain-invariance for robust boundary delineation. -->
+		<br>
   		<br>
 
   		  <table align="center" width="1100px">
   			<tbody>
 			<tr><td width="100px"><left>
 	  		<h2>Citation</h2>
-	  		If this dataset is helpful for your research, please consider citing:
+	  		If this dataset or the code is helpful for your research, please consider citing:
 	  		 <pre>
 			  <code>
 	@inproceedings{liu2020saml,
@@ -277,7 +307,7 @@
 			</pre>
 			</left></td></tr>
 			</tbody></table>
-
+	<!-- 	  <hr> -->
 ​		  
   		  <table align="center" width="1100px">
   			<tbody>
@@ -288,7 +318,23 @@
 -->
 			</left></td></tr>
 			</tbody></table>
+
+		 
 		<br>
+		<br>
+ 		<!-- <hr> -->
+
+  		  <table align="center" width="1100px">
+  			<tbody>
+			<tr><td width="400px"><left>
+	  		<h2>Contact</h2>
+	  		For further question about the dataset, please contact Quande Liu (qdliu@cse.cuhk.edu.hk)
+	  		  <!-- We thank anonymous reviewers for the comments and suggestions. The work is supported by the Research Grants Council of the Hong Kong Special Administrative Region (Project no. GRF 14225616), the Shenzhen Science and Technology Program (No. JCYJ20170413162617606 and No. JCYJ20160429190300857), and the CUHK strategic recruitment fund.
+-->
+			</left></td></tr>
+			</tbody></table>
+		<br>
+		 <hr>
 		<br>
 
   		  <table align="center" width="1100px">
