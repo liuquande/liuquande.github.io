@@ -210,12 +210,12 @@
          This is a well-organized multi-site dataset for public use, which contains prostate T2-weighted MRI data (with segmentation mask) collected from six different data sources out of three public datasets. It can support research in various problem settings with need of multi-site data, such as <a href="https://github.com/liuquande/SAML"> Domain Generalization</a>, <a href="https://arxiv.org/abs/2002.03366"> Multi-site Learning</a>, <a href="https://arxiv.org/abs/1805.10170"> Life-long Learning</a>, etc.  
 		<br><br><hr>
 	
-		<h3>Details of data and imaging protocols</h3>
+		<h3>(1) Details of data and imaging protocols</h3>
 		The details of sample number and imaging protocols in each site are summarized in the tabel below:
   		    <table align="center" width="900px">
   			<tbody>
   			  	<tr>
-  			  		<td align="center"><img class="round" style="width:700px" src="figure/protocol.png"></td>	
+  			  		<td align="center"><img class="round" style="width:800px" src="figure/protocol.png"></td>	
 			  	</tr>
 			</tbody>
 			</table>
@@ -226,7 +226,7 @@
            <li>Samples of Site D,E,F are from  <a href="https://promise12.grand-challenge.org/"> Prostate MR Image Segmentation 2012</a> (PROMISE12) dataset [3].</li>
          </ul>
 
-		<h3> Preprocessing steps <br></h3>
+		<h3>(2) Preprocessing steps <br></h3>
 		We frist convert data from all six sites uniformly to '.nii' format. For preprocessing, we center-cropped the images from Site C with roughly same view in axial plane as images from other sites (since the raw images of Site C are scanned from whole body rather than prostate surrounding area). After that, we resized all samples in the six sites to size of 384x384 in axial plane. This version is called 'Raw_nii'.
 		
 		<br> 
@@ -245,7 +245,7 @@
               </tr>
   		</tbody></table>  -->
 
-  		  <h3>Dataset Download Links</h3>
+  		  <h3>(3) Dataset Download Links</h3>
 
   		  	Datasets:  <span style="font-size:16px"><a href="https://github.com/EmmaW8/pOSAL/raw/master/results/GS_test.zip">[Raw_nii]</a> 
 			     <span style="font-size:16px"><a href="https://github.com/EmmaW8/pOSAL/raw/master/results/RIM-ONE_test.zip">[Clipped_nii]</a>
@@ -260,13 +260,29 @@
 
   		<br>
 
+  		  <table align="center" width="1100px">
+  			<tbody>
+			<tr><td width="100px"><left>
+	  		<h2>Citation</h2>
+	  		If this dataset is helpful for your research, please consider citing:
+	  		 <pre>
+			  <code>
+	@inproceedings{shao2020finegym,
+		title={Shape-aware Meta-learning for Generalizing Prostate MRI Segmentation to Unseen Domains},
+		author={Liu, Quande and Dou, Qi and Heng, Pheng Ann},
+		booktitle={International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI)},
+		year={2020}}
+			  </code>
+			</pre>
+			</left></td></tr>
+			</tbody></table>
 
 ​		  
   		  <table align="center" width="1100px">
   			<tbody>
 			<tr><td width="400px"><left>
-	  		<h1>Acknowledgements</h1>
-	  		We thank the organizers and collaborators of NCI-ISBI13 Challenge [1], PROMISE12 Challenge [2] and I2CVB dataset [3] for sharing the data for public use. 
+	  		<h2>Acknowledgements</h2>
+	  		We sincerely thank the organizers and collaborators of NCI-ISBI13 Challenge [1], PROMISE12 Challenge [2] and I2CVB dataset [3] for sharing the data for public use. 
 	  		  <!-- We thank anonymous reviewers for the comments and suggestions. The work is supported by the Research Grants Council of the Hong Kong Special Administrative Region (Project no. GRF 14225616), the Shenzhen Science and Technology Program (No. JCYJ20170413162617606 and No. JCYJ20160429190300857), and the CUHK strategic recruitment fund.
 -->
 			</left></td></tr>
@@ -277,7 +293,7 @@
   		  <table align="center" width="1100px">
   			<tbody>
 			<tr><td width="400px"><left>
-	  		<h1>Reference</h1>
+	  		<h2>Reference</h2>
            [1] Bloch, N., Madabhushi, A., Huisman, H., Freymann, J., et al.: NCI-ISBI 2013 Challenge: Automated Segmentation of Prostate Structures. (2015)
            <br>[2] Lemaitre, G., Marti, R., Freixenet, J., Vilanova. J. C., et al.: Computer-Aided Detection and diagnosis for prostate cancer based on mono and multi-parametric MRI: A review. In: Computers in Biology and Medicine, vol. 60, pp. 8-31 (2015)
            <br>[3] Litjens, G., Toth, R., Ven, W., Hoeks, C., et al.: Evaluation of prostate segmentation algorithms for mri: The promise12 challenge. In: Medical Image Analysis.
