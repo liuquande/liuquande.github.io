@@ -245,17 +245,18 @@
 		<br> 
 
 		<h3>(3) Preprocessing steps <br></h3>
-		We frist convert data from all six sites uniformly to '.nii' format. For preprocessing, we center-cropped the images from Site C with roughly same view in axial plane as images from other sites (since the raw images of Site C are scanned from whole body rather than prostate surrounding area). After that, we resized all samples in the six sites to size of 384x384 in axial plane. This version is called <B>'Raw_nii'</B>.
+		We frist convert data from all six sites uniformly to '.nii' format. For preprocessing, we center-cropped the images from Site C with roughly same view in axial plane as images from other sites (since the raw images of Site C are scanned from whole body rather than prostate surrounding area). After that, we resized all samples in the six sites to size of 384x384 in axial plane. 
+		<!-- This version is called <B>'Raw_nii'</B>. -->
 		
-		<br> 
+<!-- 		<br> 
 		<br>
 
 		With the data from 'Raw_nii', we further clip each volume data in the six sites to only preserve slices of prostate region in z space, for the consistency of objective segmented region across domains. This version is called <B>'Clipped_nii'</B>.
-
+ -->
   	<!--
 	We demonstrate the quality of our method by applying it to consolidate point sets and reconstruct surfaces. Our method produces consolidated point sets and improves the surface reconstruction quality, particularly on preserving the edges. -->
 
-  		<br><br>
+  		<!-- <br><br> -->
  <!--  		<table align="center" width="600px">
 			  <tbody><tr>
 				  <td><span style="font-size:24pt"><center>
@@ -267,7 +268,8 @@
 
 
   		  <h3>(4) Dataset Download Links</h3>
-			<span style="font-size:16px"><a href="https://drive.google.com/drive/folders/1GnDk2EgZbfFuve2iRO0QGdQykQrfxkfK?usp=sharing">[Raw_nii]</a> <br> <br> <span style="font-size:16px"><a href="https://drive.google.com/drive/folders/1uuGvcFescRfBDR-cnxRcLn0k0yebB3Fc?usp=sharing">[Clipped_nii]</a>
+			<span style="font-size:16px"><a href="https://drive.google.com/drive/folders/1GnDk2EgZbfFuve2iRO0QGdQykQrfxkfK?usp=sharing">[Processed_data_nii]</a> <br> <br> 
+				<!-- <span style="font-size:16px"><a href="https://drive.google.com/drive/folders/1uuGvcFescRfBDR-cnxRcLn0k0yebB3Fc?usp=sharing">[Clipped_nii]</a> -->
 
 
 		  <br>
@@ -287,9 +289,9 @@
 			</left></td></tr>
 			</tbody></table>
 			  	Overview of the shape-aware meta-learning scheme. The source domains are randomly split into meta-train and meta-test to simulate the domain shift. In meta-optimization: (1) we constrain the shape compactness in meta-test to encourage segmentations with complete shape; (2) we promote the intra-class cohesion and inter-class separation between the contour and background embeddings regardless of domains, to enhance domain-invariance for robust boundary delineation. -->
-		<br>
+		<!-- <br>
   		<br>
-
+ -->
   		  <table align="center" width="1100px">
   			<tbody>
 			<tr><td width="100px"><left>
